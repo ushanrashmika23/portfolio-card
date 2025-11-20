@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+
+<body class="bg-gray-200 min-h-screen flex flex-col justify-center items-center py-10">
+
+    <!-- CARD WRAPPER -->
+    <div class="flip-card w-[380px] h-[600px]">
+        <div id="flipInner" class="flip-inner relative">
+
+            <!-- -------------------------------------------------- -->
+            <!-- FRONT SIDE                                          -->
+            <!-- -------------------------------------------------- -->
+            <div class="side absolute w-full h-full bg-white rounded-[38px] shadow-2xl overflow-hidden">
+
+                <!-- navy main shape -->
+                <div
+                    class="front-navy bg-[var(--navy)] absolute top-[-50px] left-[-100px] w-[300px] h-[300px] rotate-[60deg]">
+                </div>
+
+                <!-- green angled right panel -->
+                <div
+                    class="front-green bg-[var(--blue)] absolute top-[-250px] left-[138px] w-[300px] h-[300px] rotate-[60deg]">
+                </div>
+
+                <!-- diagonal white panel -->
+                <div
+                    class="front-white-slope bg-[var(--navy)]  absolute top-[15px] left-[290px] w-[300px] h-[300px] rotate-[60deg]">
+                </div>
+
+                <!-- Logo -->
+                <div class="absolute top-6 left-6 flex items-end gap-2">
+                    <span class="text-white font-semibold text-sm tracking-[5px]">RASHMIKA</span>
+                    <div class="w-1 h-1 mb-1 ml-[-5px] rounded-sm bg-[var(--blue)]"></div>
+                </div>
+
+                <!-- Circle Profile Image -->
+                <div class="absolute top-[160px] left-1/2 -translate-x-1/2">
+                    <img src="img/me.jpg"
+                        class="w-32 h-32 cursor-pointer rotate-[-6deg] rounded-full border-4 border-white shadow-xl object-cover" />
+                </div>
+
+                <!-- Name + Role -->
+                <div class="absolute top-[305px] w-full text-center">
+                    <h2 class="text-2xl font-semibold text-gray-900 tracking-wide">
+                        USHAN <span class="text-[var(--blue)]">RASHMIKA</span>
+                    </h2>
+                    <p class="text-sm text-gray-500 font-semibold tracking-[1px] mt-1">FULL-STACK DEVELOPER</p>
+                </div>
+
+                <!-- Info -->
+                <div
+                    class="w-full absolute top-[380px] left-1/2 -translate-x-1/2 text-[15px] text-gray-700 space-y-4 leading-tight text-center">
+                    <p>
+                        <span
+                            class="inline-flex items-center gap-1 mb-2 bg-gray-200 text-gray-600 text-xs font-medium px-2 py-0 rounded-full border border-gray-300">
+                            <i data-lucide="mail" class="w-3 h-3"></i> Email
+                        </span>
+                        <br>
+                        <a href="mailto:ushanrashmika23@gmail.com" class="font-semibold">ushanrashmika23@gmail.com</a>
+                    </p>
+                    <p>
+                        <span
+                            class="inline-flex items-center gap-1 mb-2 bg-gray-200 text-gray-600 text-xs font-medium px-2 py-0 rounded-full border border-gray-300">
+                            <i data-lucide="map-pin" class="w-3 h-3"></i> Location
+                        </span>
+                        <br>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Sri+Lanka" target="_blank"
+                            class="font-semibold">Sri Lanka</a>
+                    </p>
+                    <p class="text-xs  text-gray-400 tracking-wide mt-3">Building sleek interfaces & powerful backend
+                        systems.</p>
+                    <!-- Social Icons -->
+                    <div class="absolute bottom-[-50px] left-1/2 -translate-x-1/2 flex space-x-4">
+                        <a href="https://github.com/ushanrashmika23" target="_blank"><i data-lucide="github"
+                                class="w-6 h-6 text-gray-600 hover:text-gray-900 cursor-pointer"></i></a>
+                        <a href="https://linkedin.com/in/ushanrashmika23" target="_blank"><i data-lucide="linkedin"
+                                class="w-6 h-6 text-gray-600 hover:text-blue-600 cursor-pointer"></i></a>
+                        <a href="https://instagram.com/ushanrashmika23" target="_blank"><i data-lucide="instagram"
+                                class="w-6 h-6 text-gray-600 hover:text-pink-500 cursor-pointer"></i></a>
+                        <a href="https://blog.example.com" target="_blank"><i data-lucide="rss"
+                                class="w-6 h-6 text-gray-600 hover:text-orange-500 cursor-pointer"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- -------------------------------------------------- -->
+            <!-- BACK SIDE                                           -->
+            <!-- -------------------------------------------------- -->
+            <div class="side back absolute w-full h-full bg-white rounded-[38px] shadow-2xl overflow-hidden p-10">
+
+                <h3 class="text-lg font-semibold text-center text-gray-800 mb-2">About Me</h3>
+                <p class="text-sm text-gray-600 leading-relaxed text-center mb-8">
+                    Full-stack developer with 2+ years of hands-on experience building modern, scalable web apps.
+                    Passionate about clean architecture and smooth user experiences.
+                </p>
+
+                <h3 class="text-lg font-semibold text-center text-gray-800 mb-4">Tech Stack</h3>
+                <div class="flex flex-wrap gap-4 mb-6 justify-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java"
+                        title="Java" class="w-7 h-7">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                        alt="JavaScript" title="JavaScript" class="w-7 h-7">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                        alt="Python" title="Python" class="w-7 h-7">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"
+                        title="React" class="w-7 h-7">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg"
+                        alt="Angular" title="Angular" class="w-7 h-7">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                        alt="Node.js" title="Node.js" class="w-7 h-7">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"
+                        alt="Spring" title="Spring" class="w-7 h-7">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"
+                        title="MySQL" class="w-7 h-7">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                        alt="MongoDB" title="MongoDB" class="w-7 h-7">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+                        alt="Docker" title="Docker" class="w-7 h-7">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"
+                        title="Git" class="w-7 h-7">
+                </div>
+
+                <h3 class="text-lg font-semibold text-center text-gray-800 mb-2">My Works</h3>
+                <div class="flex justify-center">
+                    <a href="github.com/ushanrashmika23" target="_blank" class="relative">
+                        <img src="img/qr.png" alt="QR Code to Blog" class="w-24 h-24">
+                        <span
+                            class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-75 text-white text-xs opacity-0 hover:opacity-100 transition-opacity">blog.example.com</span>
+                    </a>
+                </div>
+
+                <div class="back-navy bg-[var(--navy)] absolute bottom-0 left-0 w-full h-[100px]"></div>
+
+                <!-- bottom-right logo -->
+                <div class="absolute bottom-4 right-6 flex items-end gap-2">
+                    <span class="text-white font-semibold text-sm tracking-[5px]">RASHMIKA</span>
+                    <div class="w-1 h-1 mb-1 ml-[-5px] rounded-sm bg-[var(--blue)]"></div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="flex gap-4 w-[360px] mt-6 justify-center">
+        <!-- FLIP BUTTON -->
+        <button id="flipBtn"
+            class="flex-1 px-8 py-3 bg-gradient-to-r from-blue-500 to-blue-700 text-white font-semibold rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center justify-center text-center">
+            <i data-lucide="rotate-cw" class="w-5 h-5 mr-2"></i> Flip Card
+        </button>
+
+        <!-- BLOG BUTTON -->
+        <a href="https://blog.example.com" target="_blank"
+            class="px-6 py-3 bg-gray-500 text-white font-medium rounded-full shadow-md hover:bg-gray-600 hover:shadow-lg transition-all duration-300 flex items-center justify-center text-center">
+            <!-- <i data-lucide="external-link" class="w-4 h-4 mr-2"></i> -->
+             Visit Journal
+        </a>
+    </div>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+:root {
+  --navy: #2C2C2E;
+  --blue: #2290FF;
+}
+*{
+    user-select: none;
+}
+.flip-card { perspective: 1600px; }
+.flip-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.9s cubic-bezier(.6,.04,.3,1);
+  transform-style: preserve-3d;
+}
+.flipped { transform: rotateY(180deg); }
+.side { backface-visibility: hidden; transform-style: preserve-3d; }
+.back { transform: rotateY(180deg); }
