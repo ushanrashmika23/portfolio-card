@@ -5,13 +5,171 @@
 *{
     user-select: none;
 }
-.flip-card { perspective: 1600px; }
+.flip-card { 
+  perspective: 1600px;
+  position: relative;
+}
+
+.flip-card:hover {
+  transform-style: preserve-3d;
+}
+
 .flip-inner {
   width: 100%;
   height: 100%;
   transition: transform 0.9s cubic-bezier(.6,.04,.3,1);
   transform-style: preserve-3d;
+  position: relative;
 }
 .flipped { transform: rotateY(180deg); }
-.side { backface-visibility: hidden; transform-style: preserve-3d; }
+.side { 
+  backface-visibility: hidden; 
+  transform-style: preserve-3d;
+  position: relative;
+  z-index: 1;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  transition: box-shadow 0.3s ease-out;
+}
+
+.flip-card:hover .side {
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
 .back { transform: rotateY(180deg); }
+
+.spin {
+  animation: spin 0.9s cubic-bezier(.6,.04,.3,1);
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.fade-in {
+  animation: fadeIn 2s ease-out;
+}
+
+.slide-up {
+  animation: slideUp 0.8s ease-out;
+}
+
+.slide-up-delayed {
+  animation: slideUp 1s ease-out 1.5s both;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  35%{
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Loader Styles */
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: linear-gradient(135deg, var(--navy) 0%, #1a1a1c 100%); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.8s ease-in-out, visibility 0.8s ease-in-out;
+}
+
+.loader-text {
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+}
+
+.letter {
+  display: inline-block;
+  opacity: 0;
+  color: var(--navy);
+  transform: scale(0.3) translateY(20px);
+  transition: all 0.3s ease-out;
+}
+
+.dot {
+  display: inline-block;
+  opacity: 0;
+  color: var(--blue);
+  transform: scale(0.3) translateY(20px);
+  transition: all 0.3s ease-out;
+}
+
+@keyframes typeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) translateY(20px);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.2) translateY(-8px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.main-content {
+  opacity: 0;
+  transform: translateY(50px) scale(0.95);
+  transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  filter: blur(5px);
+}
+
+.main-content.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+
+/* Staggered entrance animation for card elements */
+.main-content.show .flip-card {
+  animation: slideUpFade 0.8s ease-out 0.3s both;
+}
+
+@keyframes slideUpFade {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.main-content.show .card-animate {
+  animation: slideUpFade 1.2s ease-out 0.5s both;
+}
+
+.main-content.show .buttons-animate {
+  animation: slideUpFade 1s ease-out 1.2s both;
+}

@@ -14,10 +14,29 @@
 
 <body class="bg-gray-200 min-h-screen flex flex-col justify-center items-center py-10">
 
+    <!-- PARTICLES BACKGROUND -->
     <div id="particles-js" class="absolute inset-0 -z-10"></div>
+    
+    <!-- LOADER -->
+    <div id="loader" class="loader">
+        <div class="loader-text">
+            <span class="letter">R</span>
+            <span class="letter">A</span>
+            <span class="letter">S</span>
+            <span class="letter">H</span>
+            <span class="letter">M</span>
+            <span class="letter">I</span>
+            <span class="letter">K</span>
+            <span class="letter">A</span>
+            <span class="dot">.</span>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="mainContent" class="main-content">
 
     <!-- CARD WRAPPER -->
-    <div class="flip-card w-[360px] h-[600px]">
+    <div class="flip-card w-[350px] h-[600px] card-animate">
         <div id="flipInner" class="flip-inner relative">
 
             <!-- ---------------------------------------------------->
@@ -156,7 +175,7 @@
         </div>
     </div>
 
-    <div class="flex gap-4 w-[360px] mt-6 justify-center">
+    <div class="flex gap-4 w-[360px] mt-12 justify-center buttons-animate">
         <!-- FLIP BUTTON -->
         <button id="flipBtn"
             class="flex-1 px-8 py-3 bg-gradient-to-r from-blue-500 to-blue-700 text-white font-semibold rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center justify-center text-center">
@@ -164,12 +183,15 @@
         </button>
 
         <!-- BLOG BUTTON -->
-        <a href="https://blog.example.com" target="_blank"
+        <a href="https://developer-journal.vercel.app/" target="_blank"
             class="px-6 py-3 bg-gray-500 text-white font-medium rounded-full shadow-md hover:bg-gray-600 hover:shadow-lg transition-all duration-300 flex items-center justify-center text-center">
             <!-- <i data-lucide="external-link" class="w-4 h-4 mr-2"></i> -->
              Visit Journal
         </a>
     </div>
+    
+    </div>
+    <!-- END MAIN CONTENT -->
 
     <script src="main.js"></script>
 
